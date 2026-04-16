@@ -1,5 +1,4 @@
 abstract class SerVivo(val especie: String, val limiteIdade: Int) {
-    // Encapsulamento
     protected var energia: Double = 50.0
         set(value) {
             field = value.coerceIn(0.0, 100.0)
@@ -8,7 +7,6 @@ abstract class SerVivo(val especie: String, val limiteIdade: Int) {
     protected var idade: Int = 0
     protected var estaVivo: Boolean = true
 
-    //
     abstract fun executarCiclo()
 
     protected fun envelhecer() {
@@ -76,7 +74,6 @@ class Animal(especie: String, val ehPredador: Boolean) : SerVivo(especie, 15) {
         }
 
         reagir()
-
         envelhecer()
         status()
     }
